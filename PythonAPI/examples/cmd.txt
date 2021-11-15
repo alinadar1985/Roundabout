@@ -1,0 +1,149 @@
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor
+CarlaUE4.exe -carla-server -windowed -ResX=600 -ResY=400 --quality-level Low
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util
+py -3.7 config.py --xodr-path=FourWayRoundaboutSingleLaneinboud.xodr
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\internship
+py -3.7 ego_new.py
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\examples
+py -3.7 ego_detection.py
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\examples
+py -3.7 open3d_lidar2.py
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\examples
+py -3.7 spawn_npc.py -n 200
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\internship
+py -3.7 plot.py
+
+----------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo
+py -3.7 sync_ego_sumo.py examples/new.sumocfg  --sumo-gui --sync-vehicle-color
+----------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo
+py -3.7 cam_send.py
+
+#################################################################################
+#################################################################################
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor
+CarlaUE4.exe -carla-server -windowed -ResX=600 -ResY=400 --quality-level Low
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\scripts
+py -3.7 dataset_generation.py
+
+py -3.7 dataset_visualization.py
+
+#################################################################################
+#################################################################################
+
+
+
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util 
+py -3.7 config.py  --map Town03 --weather ClearNoon 
+----------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\examples
+py -3.7 ego.py
+----------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo
+py -3.7 sync_ego_sumo.py examples/Town03.sumocfg  --sumo-gui --sync-vehicle-color
+
+
+
+
+
+
+
+py -3.7 config.py --osm-path=tasmania.osm    
+
+----------------------------------------------------------
+
+
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util       
+py -3.7 config.py  --map Town01 --weather ClearNoon 
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\examples
+py -3.7 ego.py
+--------------------------------------------------------------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo
+py -3.7 run_synchronization.py examples/Town01.sumocfg  --sumo-gui --sync-vehicle-color
+-------------------------------------------------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo
+py -3.7 sync_ego_sumo.py examples/Town01.sumocfg  --sumo-gui --sync-vehicle-color
+--------------------------------------------------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo
+py -3.7 cam_send.py
+-------------------------------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util       
+py -3.7 config.py --no-rendering
+-------------------------------------------------------------------------------------------------------------------------
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util       
+py -3.7 config.py --osm-path=map.osm
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util       
+py -3.7 osm2odr.py
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo\util
+py -3.7 netconvert_carla.py C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\CarlaUE4\Content\Carla\Maps\OpenDrive\OpenDriveMap.xodr --output Test.net.xml
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\PythonAPI\util       
+py -3.7 config.py --xodr-path=map.xodr
+
+
+
+
+#########################################################################################
+Warning: Could not write OpenDRIVE geoReference. Only unshifted Coordinate systems are supported (offset=6604091.81,-5375584.64)
+
+
+cd C:\Users\alina\Desktop\carla\CARLA_0.9.10\WindowsNoEditor\Co-Simulation\Sumo\aliexamples
+C:\Users\alina\Desktop\carla\sumo\bin\netconvert -c map.netccfg
+C:\Users\alina\Desktop\carla\sumo\bin\netconvert --osm-files map1.osm --lefthand --output.street-names -o map1.net.xml
+C:\Users\alina\Desktop\carla\sumo\bin\polyconvert -c map.polycfg
+
+C:\Users\alina\Desktop\carla\sumo\tools\randomTrips.py -n  map.net.xml -e 3000 -p 50
+
+
+
+
+
+
+
+
+
+
+str(ego_vehicle) Actor(id=259, type=vehicle.tesla.model3)
+
+
+<location netOffset="-632256.09,-4001892.10" 
+       convBoundary="0.00,0.00,23290.89,6159.40" 
+       origBoundary="-85.529320,36.149293,-85.270963,36.206986"
+
+       minlat='36.1702' minlon='-85.5179' maxlat='36.1808' maxlon='-85.5017'
+-------------------------------------------------------------------
+GeoLocation(latitude=42.000000, longitude=2.000000, altitude=0.000000)
+-------------------------------------------------------------------
+WARNING: cannot parse georeference: ''. Using default values.
+
+Ego Location:Location(x=3907.234863, y=4190.844727, z=178.681244)
+GNSS measure:GnssMeasurement(frame=9690, timestamp=14.690177, lat=41.962342, lon=2.047231, alt=178.681244)
+
+
+
+
+
+When evaluating potential hazard for future automated vehicles,
+traffic simulators like SUMO () do not provide the required level of
+precision for modeling automated driving vehicles. Driver simulators like
+CARLA https://carla.org/ aim at modeling selected vehicle precisely as well
+as support robotic control for modeling future automated driving vehicles.
+The objective of this project is to connect the driver simulator CARLA to
+the geoserver in order to emulate real legacy/automated vehicles, exchange
+potential sensor information with the geosever and finally distribute
+control mechanisms for automated vehicles between vehicles and the 5G MECs.
+An additional objective will be to synchronize CARLA with SUMO in order to
+enable the precise driving of one single vehicle in CARLA, yet surrounded by
+a larger set of vehicles controlled by SUMO.
